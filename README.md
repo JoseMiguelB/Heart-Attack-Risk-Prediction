@@ -1,7 +1,5 @@
 # ❤️ Heart Attack Risk Prediction
 
-![Project Banner](assets/project_banner.png)
-
 ![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Kaggle](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)
@@ -34,9 +32,9 @@ We didn't just train a model; we performed a comparative analysis between:
 
 ## 💾 Dataset
 Due to size constraints, the full processed dataset is hosted on Kaggle:
-👉 **[Download Dataset from Kaggle](AQUI_PEGAS_TU_LINK_DE_KAGGLE)**
+👉 **[Download Dataset from Kaggle](https://www.kaggle.com/datasets/josembm/heart-attack-risk-prediction)**
 
 ## 🚀 Installation
 1. Clone the repo:
    ```bash
-   git clone [https://github.com/JoseMiguelB/Heart-Attack-Risk-Prediction.git](https://github.com/JoseMiguelB/Heart-Attack-Risk-Prediction.git)
+   git clone https://github.com/JoseMiguelB/Heart-Attack-Risk-Prediction.git
