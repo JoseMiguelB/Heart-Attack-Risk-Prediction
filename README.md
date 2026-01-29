@@ -26,8 +26,8 @@ By removing low-impact variables in `02_Optimized_Feature_Selection`, we simplif
 
 | Model Version | Features Count | Accuracy | Recall (Sensitivity) |
 | :--- | :---: | :---: | :---: |
-| **Full Model** | All | XX.X% | XX.X% |
-| **Optimized** | Reduced | XX.X% | XX.X% |
+| **Full Model** | All | 85.5% | 1.00% |
+| **Optimized** | Reduced | 87.0% | 1.00% |
 
 > **Medical Note:** We prioritized **Recall** (Sensitivity) to minimize False Negatives. In cardiac diagnostics, missing a positive case (False Negative) is the most critical error.
 
