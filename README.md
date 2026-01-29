@@ -23,7 +23,7 @@ We didn't just train a model; we performed a comparative analysis between:
 | :--- | :---: | :---: |
 | **Accuracy** | 9X.X% | 9X.X% |
 | **Recall (Sensitivity)** | 9X.X% | 9X.X% |
-
+![Confusion Matrix](assets/confusion_matrix.png.png)
 > **Medical Focus:** We prioritized **Recall** to minimize False Negatives. In healthcare, missing a patient at risk is a critical failure.
 
 ## 📂 Project Structure
