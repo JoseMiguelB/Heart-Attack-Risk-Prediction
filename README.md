@@ -1,38 +1,57 @@
-# ❤️ Heart Attack Risk Prediction
+# ❤️ Heart Attack Risk Prediction: Model Optimization
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Kaggle](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.x-blue) ![Random Forest](https://img.shields.io/badge/Model-Random_Forest-green) ![Status](https://img.shields.io/badge/Status-Optimized-orange)
 
 ## 📋 Overview
-Cardiovascular diseases are the leading cause of death globally. This project analyzes 2022 CDC health indicators to predict heart attack risks.
+This project focuses on predicting the risk of heart attacks using a dataset of **2022 health indicators**. The core engineering challenge was not just to build a predictive model, but to **optimize it** by identifying the most critical risk factors effectively reducing the computational input without sacrificing diagnostic accuracy.
 
-**The Engineering Challenge:**
-We didn't just train a model; we performed a comparative analysis between:
-1.  **Baseline Model:** Using all available clinical features (~40 attributes).
-2.  **Optimized Model:** Reduced to key risk factors (Age, Smoking, BMI, etc.) to improve computational efficiency without sacrificing sensitivity.
+We implemented two approaches:
+1.  **Baseline Model:** Utilizing the full spectrum of clinical attributes.
+2.  **Optimized Model:** Reducing the dimensionality to the top key indicators based on Feature Importance analysis.
 
-## ⚙️ Methodology
-* **Data Cleaning:** Handling nulls and normalizing continuous variables.
-* **Class Imbalance:** Applied SMOTE to ensure the model learns to detect the minority class (Positive cases).
-* **Feature Selection:** Used Random Forest importance metrics to filter out noise.
+## ⚙️ Key Technologies
+* **Algorithm:** Random Forest Classifier.
+* **Techniques:** SMOTE (Synthetic Minority Over-sampling Technique) for handling class imbalance.
+* **Optimization:** Feature Selection based on Gini Importance.
 
-## 📊 Key Results
+## 📊 Engineering Insights
 
-| Metric | Full Model | Optimized Model |
-| :--- | :---: | :---: |
-| **Accuracy** | 9X.X% | 9X.X% |
-| **Recall (Sensitivity)** | 9X.X% | 9X.X% |
+### 1. What drives the prediction? (Feature Importance)
+Through the Random Forest analysis in `01_Full_Model`, we identified that lifestyle factors (BMI, Smoking) and Age are significant predictors, allowing us to filter out noise from less relevant variables.
+
+![Feature Importance](assets/feature_importance.png.png)
+
+### 2. Optimization Results (Full vs. Reduced)
+By removing low-impact variables in `02_Optimized_Feature_Selection`, we simplified the model input.
+
+| Model Version | Features Count | Accuracy | Recall (Sensitivity) |
+| :--- | :---: | :---: | :---: |
+| **Full Model** | All | XX.X% | XX.X% |
+| **Optimized** | Reduced | XX.X% | XX.X% |
+
+> **Medical Note:** We prioritized **Recall** (Sensitivity) to minimize False Negatives. In cardiac diagnostics, missing a positive case (False Negative) is the most critical error.
+
+### Confusion Matrix (Optimized Model)
 ![Confusion Matrix](assets/confusion_matrix.png.png)
-> **Medical Focus:** We prioritized **Recall** to minimize False Negatives. In healthcare, missing a patient at risk is a critical failure.
 
-## 📂 Project Structure
-* `notebooks/01_Full_Model_Baseline.ipynb`: Initial exploration and full training.
-* `notebooks/02_Optimized_Feature_Selection.ipynb`: Refined model using only top features.
+## 🚀 Usage
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/JoseMiguelB/Heart-Attack-Risk-Prediction.git
+    ```
+2.  Install dependencies:
+    ```bash
+    pip install pandas scikit-learn seaborn matplotlib
+    ```
+3.  Run the notebooks:
+    * Start with `notebooks/01_Full_Model...` for the complete analysis.
+    * Check `notebooks/02_Optimized...` for the refined model.
 
-## 💾 Dataset
-Due to size constraints, the full processed dataset is hosted on Kaggle:
+## 📂 Dataset
+The full dataset (~78MB) is sourced from the **CDC (2022)**. Due to GitHub size limits, it is available externally:
 👉 **[Download Dataset from Kaggle](https://www.kaggle.com/datasets/josembm/heart-attack-risk-prediction)**
+
+*A `sample_heart_data.csv` is provided in the `data/` folder for code testing purposes.*
 
 ## 🚀 Installation
 1. Clone the repo:
